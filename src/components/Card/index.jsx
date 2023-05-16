@@ -1,6 +1,7 @@
-import './App.css';
+import '../../App.css';
 // import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import LikeBtn from '../LikeBtn';
 
 const artists = [
 	{
@@ -28,27 +29,24 @@ const artists = [
 ];
 
 export default function ArtistCard() {
-	const white = 'https://img.icons8.com/ios-filled/50/f5f5f1/like--v1.png';
-	// const red = 'https://img.icons8.com/ios-filled/50/f5f5f1/like--v1.png';
-
 	const renderCard = (card, index) => {
 		return (
 			<Card style={{ width: '18rem', border: '1px solid #f5f5f1' }} key={index}>
 				<Card.Img style={{ width: '18rem' }} variant="top" src={card.image} />
 				<Card.Body style={{ padding: '10px' }}>
 					<Card.Title style={{ textAlign: 'center', fontSize: '1.8rem' }}>{card.name}</Card.Title>
-					<Card.Text style={{ textAlign: 'left', fontSize: '1.2rem' }}>
-						{card.firstSong}
-						<img width="50" height="50" src={white} alt="like--v1" />
-					</Card.Text>
-					<Card.Text style={{ textAlign: 'left', fontSize: '1.2rem' }}>
-						{card.secondSong}
-						<img width="50" height="50" src="https://img.icons8.com/ios-filled/50/e50914/like--v1.png" alt="like--v1" />
-					</Card.Text>
-					<Card.Text style={{ textAlign: 'left', fontSize: '1.2rem' }}>
-						{card.thirdSong}
-						<img width="50" height="50" src="https://img.icons8.com/ios-filled/50/e50914/like--v1.png" alt="like--v1" />
-					</Card.Text>
+					<div className="card-texta">
+						<Card.Text style={{ textAlign: 'left', fontSize: '1.2rem' }}>{card.firstSong}</Card.Text>
+						<LikeBtn />
+					</div>
+					<div className="card-texta">
+						<Card.Text style={{ textAlign: 'left', fontSize: '1.2rem' }}>{card.secondSong}</Card.Text>
+						<LikeBtn />
+					</div>
+					<div className="card-texta">
+						<Card.Text style={{ textAlign: 'left', fontSize: '1.2rem' }}>{card.thirdSong}</Card.Text>
+						<LikeBtn />
+					</div>
 				</Card.Body>
 			</Card>
 		);

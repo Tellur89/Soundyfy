@@ -1,6 +1,6 @@
-import WelcomeBtn from './WelcomeBtn.jsx';
+import { WelcomeBtn } from '..';
 
-export default function Welcome() {
+const Welcome = () => {
 	return (
 		<>
 			<h1>
@@ -9,4 +9,6 @@ export default function Welcome() {
 			<WelcomeBtn />
 		</>
 	);
-}
+};
+
+export default Welcome;

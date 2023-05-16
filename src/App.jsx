@@ -3,8 +3,7 @@ import './App.css';
 
 import { Routes, Route } from 'react-router-dom';
 
-import Welcome from './Welcome';
-import Board from './Board';
+import { Welcome, Board } from './components';
 
 export default function App() {
 	return (

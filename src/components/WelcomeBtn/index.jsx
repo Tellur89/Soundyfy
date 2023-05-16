@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import './App.css';
-export default function WelcomeBtn() {
+import '../../App.css';
+const WelcomeBtn = () => {
 	return (
 		<>
 			<Link to="/board" type="button" className="btn__welcome">
@@ -8,4 +8,6 @@ export default function WelcomeBtn() {
 			</Link>
 		</>
 	);
-}
+};
+
+export default WelcomeBtn;

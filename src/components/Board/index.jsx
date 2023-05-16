@@ -1,9 +1,9 @@
-import ArtistCard from './Card';
+import Card from '../Card';
 
 export default function Board() {
 	return (
 		<>
-			<ArtistCard />
+			<Card />
 		</>
 	);
 }
