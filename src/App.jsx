@@ -12,7 +12,7 @@ export default function App() {
 				<Route path="/board" element={<NavBar />}>
 					<Route index element={<Board />} />
 					<Route path="search" element={<Search />} />
-					<Route path="add" element={<Add />} />
+					<Route path="add" element={<AddArtist />} />
 				</Route>
 			</Routes>
 		</div>
