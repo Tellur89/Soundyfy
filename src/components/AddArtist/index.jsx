@@ -7,7 +7,7 @@ const AddArtist = () => {
 	return (
 		<>
 			<h1>Add</h1>
-			<button onClick={() => navigate('/board')} className="btn__welcome">
+			<button onClick={() => navigate('/')} className="btn__welcome">
 				Back
 			</button>
 		</>

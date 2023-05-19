@@ -1,0 +1,43 @@
+.form {
+	padding: 1rem;
+}
+
+.form__group {
+	height: 3rem;
+	width: 15rem;
+	margin-bottom: 2.5rem;
+	position: relative;
+	padding: 1rem;
+}
+
+.form__input {
+	height: 100%;
+	width: 100%;
+	border: 2px solid #f8f8f1;
+	border-radius: 0.5rem;
+	font-family: inherit;
+	font-weight: inherit;
+	color: inherit;
+	outline: none;
+	padding: 0.5rem 1rem;
+	background: none;
+	font-size: 1.6rem;
+}
+
+.form__label {
+	color: #e7e7e3;
+	padding: 0 5px;
+	position: absolute;
+	font-size: 1.6rem;
+	left: 1.8rem;
+	top: 1.9rem;
+	background-color: #221f1f;
+	transition: all 200ms ease-in;
+}
+
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+	top: 0.2rem;
+	left: 1.6rem;
+	font-size: 1.1rem;
+}
