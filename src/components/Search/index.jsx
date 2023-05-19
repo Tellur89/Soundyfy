@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import ArtistCard from '../Card';
-import '../WelcomeForm/style.css';
 import '../../App.css';
+import './style.css';
 
 const Search = (index) => {
 	const navigate = useNavigate();
@@ -43,7 +43,7 @@ const Search = (index) => {
 	};
 
 	return (
-		<>
+		<div className="center">
 			<form className="form" onSubmit={handleSubmit}>
 				<div className="form__group">
 					<input type="text" id="name" className="form__input" placeholder=" " autoComplete="off" onChange={handleInput} />
@@ -54,22 +54,41 @@ const Search = (index) => {
 				<input type="submit" value="Search" className="btn__welcome" />
 			</form>
 
-			{!isLoaded && <p>loading...</p>}
 			{isLoaded && (
-				<ArtistCard
-					key={index}
-					name={songs[0].artist.name}
-					image={songs[20].artist.picture}
-					firstSong={songs[4].title}
-					secondSong={songs[10].title}
-					thirdSong={songs[15].title}
-				/>
+				<div className="card">
+					<ArtistCard
+						key={songs.index}
+						name={songs[0].artist.name}
+						image={songs[0].artist.picture}
+						firstSong={songs[0].title_short}
+						secondSong={songs[1].title_short}
+						thirdSong={songs[2].title_short}
+					/>
+
+					<ArtistCard
+						key={songs.index}
+						name={songs[3].artist.name}
+						image={songs[3].artist.picture}
+						firstSong={songs[3].title_short}
+						secondSong={songs[4].title_short}
+						thirdSong={songs[5].title_short}
+					/>
+
+					<ArtistCard
+						key={songs.index}
+						name={songs[6].artist.name}
+						image={songs[6].artist.picture}
+						firstSong={songs[6].title_short}
+						secondSong={songs[7].title_short}
+						thirdSong={songs[8].title_short}
+					/>
+				</div>
 			)}
 
 			<button onClick={() => navigate('/')} className="btn__welcome">
 				Back
 			</button>
-		</>
+		</div>
 	);
 };
 

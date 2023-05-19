@@ -10,13 +10,13 @@ export default function App() {
 		<div className="App">
 			<AuthProvider>
 				<Routes>
-					{/* <Route path="/" element={<ProtectedRoute redirectTo="/welcome" />}> */}
-					<Route path="/" element={<C.NavBar />}>
-						<Route index element={<C.Board />} />
-						<Route path="/search" element={<C.Search />} />
-						<Route path="/add" element={<C.AddArtist />} />
+					<Route path="/" element={<ProtectedRoute redirectTo="/welcome" />}>
+						<Route path="/" element={<C.NavBar />}>
+							<Route index element={<C.Board />} />
+							<Route path="/search" element={<C.Search />} />
+							<Route path="/add" element={<C.AddArtist />} />
+						</Route>
 					</Route>
-					{/* </Route> */}
 					<Route path="/welcome" element={<C.Welcome />} />
 				</Routes>
 			</AuthProvider>
